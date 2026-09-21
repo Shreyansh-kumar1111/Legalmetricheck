@@ -1,0 +1,78 @@
+# ============================================================
+# LegalMetriCheck — Git Ignore Rules
+# ============================================================
+
+# --- Dependencies ---
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# --- Environment & Sensitive Credentials (CRITICAL) ---
+# Ignore all .env files containing personal API keys or DB credentials
+.env
+.env*.local
+.env.development
+.env.test
+.env.production
+.env*
+# Whitelist example file so contributors know what variables to set
+!.env.example
+
+# Cryptographic Keys & Certificates
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+
+# --- Build Outputs & Caches ---
+/.next/
+/out/
+/build/
+/dist/
+/.open-next/
+/.wrangler/
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# --- Testing & Coverage ---
+/coverage
+*.lcov
+
+# --- Logs & Debugging ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- Operating System Files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- IDE & Editor Configs (Personal Settings) ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+.gemini/
+
+# --- Archive & Temporary Files ---
+/_archive/
+*.tmp
+*.temp
